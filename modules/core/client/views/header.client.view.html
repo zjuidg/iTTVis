@@ -1,0 +1,47 @@
+<div class="banner-icon">
+	<div class="icon dropdown">
+		<div class="dropdown-toggle" id="dropdownMenuLoad" data-toggle="dropdown" style="font-size: 1.6em;">
+		  <span class="glyphicon glyphicon-folder-open"></span>
+		  <span class="caret" style="margin-left: 20px;"></span>
+		</div>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownOptions">
+			<li role="presentation">
+				<button type="button" class="btn switchBtn" id="example1" ng-click="app.loadData('default')">Example 1</button>
+			</li>
+			<li role="presentation">
+				<button type="button" class="btn switchBtn" id="example2" ng-click="app.loadData('example2')">Example 2</button>
+			</li>
+			<li role="presentation">
+				<button type="button" class="btn switchBtn" id="example3" ng-click="app.loadData('example3')">Example 3</button>
+			</li>
+		</ul>
+	</div>
+		<!-- <div id="load" file-model cb="app.load">
+		  <span class="glyphicon glyphicon-folder-open"></span>
+		  <input type="file"/>
+		</div> -->
+	<div class="label A">
+	</div>
+	<span>{{'player1'|T}}</span>
+	<div class="label B">
+	</div>
+	<span>{{'player2'|T}}</span>
+</div>
+
+<div id="system-name">{{'title'|T}}</div>
+
+<div class="banner-lang">
+	<div class="dropdown">
+		<button type="button" class="btn switchBtn dropdown-toggle" id="dropdownMenuLang" data-toggle="dropdown">{{app.curLang}}
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownOptions">
+			<li role="presentation">
+				<button type="button" class="btn switchBtn" id="en" ng-click='app.changeLang("en")'>English</button>
+			</li>
+			<li role="presentation">
+				<button type="button" class="btn switchBtn" id="cn" ng-click='app.changeLang("cn")'>简体中文</button>
+			</li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,126 @@
+<section>
+    <div class="vis">
+        <div id="container1">
+            <div id="games-view" class="flex">
+                <div class="view flex-5" games-view
+                    games="app.data.games"
+                    rallies="app.data.rallies"
+                    cb="app.setRallies"
+                    rallycb="app.setRally"
+                    update="app.safeApply">
+                </div>
+                <div id="fView" class="select-view flex-1" filter-view
+                    games="app.data.games"
+                    rallies="app.data.rallies"
+                    cb="app.setRallies"
+                    rallycb="app.setRally">
+                    <!-- <svg style="height: 450px;position: absolute;top: 8px;" id="filterSvg">
+                    </svg>
+                    <ul style="position: absolute;top: 8px;">
+                        <li class="flex">
+                            <input type="checkbox" class="checkbox" name="sphase" />
+                            <span class="checkname">Start Phase</span>
+                        </li>
+                        <li class="flex">
+                            <input type="checkbox" class="checkbox" name="mphase" />
+                            <span class="checkname">Middle Phase</span>
+                        </li>
+                        <li class="flex">
+                            <input type="checkbox" class="checkbox" name="ephase" />
+                            <span class="checkname">End Phase</span>
+                        </li>
+
+                        <li class="flex">
+                            <input type="checkbox" class="checkbox" name="game1" />
+                            <span class="checkname">Game1</span>
+                        </li>
+                        <li class="flex">
+                            <input type="checkbox" class="checkbox" name="game2" />
+                            <span class="checkname">Game2</span>
+                        </li>
+                        <li class="flex">
+                            <input type="checkbox" class="checkbox" name="game3" />
+                            <span class="checkname">Game3</span>
+                        </li>
+                        <li class="flex">
+                            <input type="checkbox" class="checkbox" name="game4" />
+                            <span class="checkname">Game4</span>
+                        </li>
+                        <li class="flex">
+                            <input type="checkbox" class="checkbox" name="game5" />
+                            <span class="checkname">Game5</span>
+                        </li>
+                        <li class="flex">
+                            <input type="checkbox" class="checkbox" name="game6" />
+                            <span class="checkname">Game6</span>
+                        </li>
+
+                        <li class="flex">
+                            <input type="checkbox" class="checkbox" name="Awin"  />
+                            <span class="checkname">Wang wins</span>
+                        </li>
+                        <li class="flex">
+                            <input type="checkbox" class="checkbox" name="Bwin" />
+                            <span class="checkname">Wu wins</span>
+                        </li>
+                        <li class="flex">
+                            <input type="checkbox" class="checkbox" name="Aleads" />
+                            <span class="checkname">Wang at Advantage</span>
+                        </li>
+                        <li class="flex">
+                            <input type="checkbox" class="checkbox" name="Bleads" />
+                            <span class="checkname">Wu at Advantage</span>
+                        </li>
+                        <li class="flex">
+                            <input type="checkbox" class="checkbox" name="draw" />
+                            <span class="checkname">Draw</span>
+                        </li>
+                        <li class="flex">
+                            <input type="checkbox" class="checkbox" name="Aserve" />
+                            <span class="checkname">Wang serve</span>
+                        </li>
+                        <li class="flex">
+                            <input type="checkbox" class="checkbox" name="Bserve" />
+                            <span class="checkname">Wu server</span>
+                        </li>
+                    </ul> -->
+
+                </div>
+            </div>
+
+            <div id="container2">
+                <div id="statistic-view">
+                    <div class="view" id="statistic" statistic-view
+                         fstrikes="app.filteredStriks"
+                         changefstrikes="app.changeFilteredStrikes"
+                         strikes="app.data.wholestrikes"
+                         rally="app.data.rally"
+                         cb="app.selectArea"
+                         update="app.safeApply">
+                    </div>
+                </div>
+                <div id="container3">
+                    <div class="view" id="tactic" tactic-view
+                         fstrikes="app.filteredStrikes"
+                         strikes="app.data.wholestrikes"
+                         update="app.safeApply">
+                    </div>
+                    <div class="view" id="history" history-view
+                        history="app.history"
+                        savecb="app.saveStatus"
+                        deletecb="app.deleteStatus"
+                        recovercb="app.recoverStatus"
+                        update="app.safeApply">
+                    </div>
+                </div>
+                <div id="stroke-view" class="{{app.strokeViewClass}}">
+                    <div class="view-float" stroke-view
+                        rally="app.data.rally">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>

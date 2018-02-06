@@ -1,0 +1,60 @@
+<div class="view-heading">
+    <div class="view-title"><span>{{'Match View'|T}}</span></div>
+    <div class="view-label"><div class="colorbar phase-start"></div><span>{{'Start'|T}}</span></div>
+    <div class="view-label"><div class="colorbar phase-middle"></div><span>{{'Middle'|T}}</span></div>
+    <div class="view-label"><div class="colorbar phase-end"></div><span>{{'End'|T}}</span></div>
+</div>
+<div class="view-body" >
+    <svg brush
+        extent='ctrl.config.brushExtent'
+        brushcb="ctrl.brush"
+        zoomcb="ctrl.zoom"
+        highlightcb="ctrl.highlight"
+        brushselection="ctrl.config.brushSelection">
+        <!-- axis -->
+        <g>
+            <g ng-repeat="guideline in ctrl.guideline">
+              <line class="guideline"
+                ng-attr-x1="{{guideline.x1}}"
+                ng-attr-y1="{{guideline.y1}}"
+                ng-attr-x2="{{guideline.x2}}"
+                ng-attr-y2="{{guideline.y2}}">
+              </line>
+            </g>
+            <g ng-repeat="axis in ctrl.xaxis track by $index">
+              <line class="axis" animate="linear"
+                ng-ani-x1="{{axis.x1}}"
+                ng-ani-y1="{{axis.y1}}"
+                ng-ani-x2="{{axis.x2}}"
+                ng-ani-y2="{{axis.y2}}">
+              </line>
+            </g>
+            <g ng-repeat="axis in ctrl.yaxis track by $index">
+                <line class="axis"
+                  ng-attr-x1="{{axis.x1}}"
+                  ng-attr-y1="{{axis.y1}}"
+                  ng-attr-x2="{{axis.x2}}"
+                  ng-attr-y2="{{axis.y2}}">
+                </line>
+
+                <g ng-repeat="tick in axis.ticks track by $index">
+                    <line class="tick" animate="linear"
+                      ng-ani-x1="{{tick.tick.x1}}"
+                      ng-ani-y1="{{tick.tick.y1}}"
+                      ng-ani-x2="{{tick.tick.x2}}"
+                      ng-ani-y2="{{tick.tick.y2}}">
+                    </line>
+
+                    <text class="tick" animate="linear"
+                      ng-ani-x="{{tick.text.x}}"
+                      ng-ani-y="{{tick.text.y}}"
+                      dominant-baseline="middle"
+                      font-size="1em">
+                      {{tick.text.text}}
+                    </text>
+                </g>
+            </g>
+        </g>
+        <g id="filterHighlight"></g>
+    </svg>
+</div>

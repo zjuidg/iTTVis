@@ -1,0 +1,33 @@
+<div class="view-body" style="position:relative;">
+  <svg id="statisticView-SVG">
+    <g id="statViewGroup" drawn="false"></g>
+  </svg>
+
+</div>
+<div class="view-heading">
+  <div class="view-title"><span>{{'Stat View'|T}}</span></div>
+  <!-- <div class="view-controll view-icon" ng-click = "ctrl.clickZoomin()"><div id="icon-zoom" class="icon icon-zoom-in"></div></div> -->
+  <div class="btn-group" style="margin-left: 15px;" id="statViewSwitchPlayerBtnGroup">
+    <button type="button" class="btn switchBtn choose" id="statViewSwitchPlayerBtnP1">{{'P1'|T}}</button>
+    <button type="button" class="btn switchBtn" id="statViewSwitchPlayerBtnP2">{{'P2'|T}}</button>
+    <button type="button" class="btn switchBtn" id="statViewSwitchPlayerBtnP1P2">{{'P1-P2'|T}}</button>
+  </div>
+
+  <div class="btn-group" style="margin-left: 15px; margin-right: 5px;" id="statViewMergeSplitGroup">
+    <button type="button" class="btn switchBtn choose" id="statViewSplitBtn">{{'Split'|T}}</button>
+    <button type="button" class="btn switchBtn" id="statViewMergeBtn">{{'Merge'|T}}</button>
+  </div>
+  :
+  <input id="mergeStart" style="height: 20px; width: 20px; margin-left: 5px;">
+  —
+  <input id="mergeEnd" style="height: 20px; width: 20px;">
+
+  <input id="maxStrikeNum" style="height: 20px; width: 20px; display: none" value="6">
+
+  <div class="btn-group"  style="margin-left: 15px;" id="statViewAttrBtnGroup">
+    <button type="button" class="btn switchBtn choose" id="attrPlaBtn">{{'Pla'|T}}</button>
+    <button type="button" class="btn switchBtn" id="attrTechBtn">{{'Tech'|T}}</button>
+    <button type="button" class="btn switchBtn" id="attrPosBtn">{{'Pos'|T}}</button>
+  </div>
+
+</div>

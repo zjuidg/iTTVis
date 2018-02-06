@@ -1,0 +1,38 @@
+<div class="view-heading">
+  <div class="view-title"><span>{{'History View'|T}}</span></div>
+  <div class="view-controll view-icon" ng-click="ctrl.saveStatus(ctrl.history, ctrl.genHistoryId())">
+      <div id="icon-saveStatus" class="icon icon-save"></div>
+  </div>
+</div>
+<div class="view-body">
+    <ul class="history-group list-group">
+        <li class="list-group-item" ng-repeat = "item in ctrl.history"
+            id="item{{item.id}}"  ng-dblclick = "ctrl.showRename(item.id)">
+            <div class="main">
+                <span class="icon icon-time"></span>
+                {{item.name}}
+                <div class="cover">
+                    <span class="icon icon-reply" ng-click="ctrl.recoverStatus(item.id)"></span>
+                    <span class="icon icon-edit" ng-click="ctrl.editComment(item.id)"></span>
+                    <span class="icon icon-trash" ng-click="ctrl.deleteStatus(item.id)"></span>
+                </div>
+                <div class="edit">
+                    <span class="icon icon-time"></span>
+                    <form class="form-inline" role="form">
+                        <input type="text" name="name" value="{{item.name}}">
+                        <span class="icon icon-ok" ng-click = "ctrl.submitRename(item.id)"></span>
+                    </form>
+                </div>
+            </div>
+            <div class="comment">
+                <div class="text">
+                    {{item.comment}}
+                </div>
+                <div class="commentEdit">
+                    <textarea value = "{{item.comment}}"></textarea>
+                    <span class="icon icon-ok" ng-click = "ctrl.submitComment(item.id)"></span>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

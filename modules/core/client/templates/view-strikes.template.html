@@ -1,0 +1,9 @@
+<div class="view-heading" ng-click = "ctrl.clickView()">
+  <div class="view-title"><span>{{'Stroke View'|T}}</span></div>
+</div>
+<div class="view-body">
+  <svg id="strokeSvg"
+       ng-attr-width="{{ctrl.config.svg.width}}"
+       ng-attr-height="{{ctrl.config.svg.height}}">
+  </svg>
+</div>
